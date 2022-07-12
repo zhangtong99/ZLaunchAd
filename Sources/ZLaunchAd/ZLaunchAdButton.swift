@@ -81,7 +81,7 @@ class ZLaunchAdButton: UIButton {
                 animation?.isRemovedOnCompletion = false
                 animationLayer.add(animation!, forKey: "strokeStartAnimation")
             }
-            setTitle("\(time)", for: .normal)
+            setTitle("\(time)s", for: .normal)
             setTitleColor(config.textColor, for: .normal)
             titleLabel?.font = config.textFont
             layer.addSublayer(animationLayer)
