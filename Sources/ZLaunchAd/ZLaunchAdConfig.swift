@@ -55,6 +55,8 @@ public typealias ZLaunchClosure = ()->()
     case roundText
     /// 圆形进度文字
     case roundProgressText
+    /// 圆形进度文字（倒计时文字）
+    case roundProgressTimerText
 }
 // MARK: - 缓存方式
 @objc public enum ZLaunchAdImageOptions: Int {

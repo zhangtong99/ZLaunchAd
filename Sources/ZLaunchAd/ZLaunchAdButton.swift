@@ -68,6 +68,23 @@ class ZLaunchAdButton: UIButton {
             setTitleColor(config.textColor, for: .normal)
             titleLabel?.font = config.textFont
             layer.addSublayer(animationLayer)
+        
+        case .roundProgressTimerText:
+            
+            if animation == nil {
+                animation = CABasicAnimation(keyPath: "strokeStart")
+                animation?.duration = Double(adDuration)
+                animation?.delegate = self
+                animation?.fromValue = 0
+                animation?.toValue = 0.9999
+                animation?.fillMode = CAMediaTimingFillMode.forwards
+                animation?.isRemovedOnCompletion = false
+                animationLayer.add(animation!, forKey: "strokeStartAnimation")
+            }
+            setTitle("\(time)", for: .normal)
+            setTitleColor(config.textColor, for: .normal)
+            titleLabel?.font = config.textFont
+            layer.addSublayer(animationLayer)
         }
     }
     
