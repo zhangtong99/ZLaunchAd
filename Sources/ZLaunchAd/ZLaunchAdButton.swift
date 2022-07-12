@@ -100,7 +100,7 @@ class ZLaunchAdButton: UIButton {
             layer.cornerRadius = frame.size.height * 0.5
             layer.borderColor = config.borderColor.cgColor
             layer.borderWidth = config.borderWidth
-        case .roundProgressText:
+        case .roundProgressText, .roundProgressTimerText:
             frame.size.width = frame.size.height
             self.frame = frame
             layer.cornerRadius = frame.size.height * 0.5
