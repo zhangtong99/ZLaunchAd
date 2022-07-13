@@ -37,7 +37,8 @@ import UIKit
         }
         launchAdView.adRequest = adNetRequest
         launchAdView.waitTime = waitTime
-        UIApplication.shared.delegate?.window??.addSubview(launchAdView)
+//        UIApplication.shared.delegate?.window??.addSubview(launchAdView)
+        UIApplication.shared.keyWindow?.addSubview(launchAdView)
         return launchAdView
     }
     
